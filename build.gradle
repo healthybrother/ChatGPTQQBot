@@ -1,0 +1,22 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.30'
+}
+
+group 'org'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    implementation(platform("net.mamoe:mirai-bom:2.14.0"))
+    implementation("net.mamoe:mirai-core-api")
+    runtimeOnly("net.mamoe:mirai-core")
+
+    implementation group: 'com.alibaba.fastjson2', name: 'fastjson2', version: '2.0.23'
+    implementation group: 'cn.hutool', name: 'hutool-all', version: '5.8.11'
+
+}
